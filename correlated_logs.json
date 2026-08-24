@@ -1,0 +1,220 @@
+{
+  "summary": {
+    "total_clusters": 15,
+    "flagged_clusters": 5,
+    "pattern_breakdown": {
+      "normal_cluster": 10,
+      "repeated_failures": 1,
+      "critical_event": 4
+    },
+    "top_flagged_ips": [
+      "192.168.1.18",
+      "192.168.1.22",
+      "192.168.1.30",
+      "192.168.1.40"
+    ]
+  },
+  "clusters": [
+    {
+      "cluster_id": "C0001",
+      "src_ip": "192.168.1.10",
+      "event_type": "LOGIN_SUCCESS",
+      "window_start": "2026-08-15T09:01:12",
+      "window_end": "2026-08-15T09:01:12",
+      "event_count": 1,
+      "pattern": "normal_cluster",
+      "severity_score": 1,
+      "log_ids": [
+        1
+      ]
+    },
+    {
+      "cluster_id": "C0002",
+      "src_ip": "192.168.1.22",
+      "event_type": "LOGIN_FAILURE",
+      "window_start": "2026-08-15T09:01:45",
+      "window_end": "2026-08-15T09:02:22",
+      "event_count": 4,
+      "pattern": "repeated_failures",
+      "severity_score": 8,
+      "log_ids": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "cluster_id": "C0003",
+      "src_ip": "192.168.1.22",
+      "event_type": "BRUTE_FORCE_SUSPECTED",
+      "window_start": "2026-08-15T09:02:40",
+      "window_end": "2026-08-15T09:02:40",
+      "event_count": 1,
+      "pattern": "critical_event",
+      "severity_score": 3,
+      "log_ids": [
+        6
+      ]
+    },
+    {
+      "cluster_id": "C0004",
+      "src_ip": "192.168.1.11",
+      "event_type": "FILE_ACCESS",
+      "window_start": "2026-08-15T09:05:00",
+      "window_end": "2026-08-15T09:05:00",
+      "event_count": 1,
+      "pattern": "normal_cluster",
+      "severity_score": 1,
+      "log_ids": [
+        7
+      ]
+    },
+    {
+      "cluster_id": "C0006",
+      "src_ip": "192.168.1.15",
+      "event_type": "LOGIN_SUCCESS",
+      "window_start": "2026-08-15T09:10:15",
+      "window_end": "2026-08-15T09:10:15",
+      "event_count": 1,
+      "pattern": "normal_cluster",
+      "severity_score": 1,
+      "log_ids": [
+        8
+      ]
+    },
+    {
+      "cluster_id": "C0007",
+      "src_ip": "192.168.1.30",
+      "event_type": "PORT_SCAN_DETECTED",
+      "window_start": "2026-08-15T09:12:33",
+      "window_end": "2026-08-15T09:12:40",
+      "event_count": 2,
+      "pattern": "normal_cluster",
+      "severity_score": 4,
+      "log_ids": [
+        9,
+        10
+      ]
+    },
+    {
+      "cluster_id": "C0008",
+      "src_ip": "192.168.1.30",
+      "event_type": "INTRUSION_ATTEMPT",
+      "window_start": "2026-08-15T09:12:55",
+      "window_end": "2026-08-15T09:12:55",
+      "event_count": 1,
+      "pattern": "critical_event",
+      "severity_score": 3,
+      "log_ids": [
+        11
+      ]
+    },
+    {
+      "cluster_id": "C0005",
+      "src_ip": "192.168.1.11",
+      "event_type": "FILE_ACCESS",
+      "window_start": "2026-08-15T09:20:00",
+      "window_end": "2026-08-15T09:20:00",
+      "event_count": 1,
+      "pattern": "normal_cluster",
+      "severity_score": 1,
+      "log_ids": [
+        12
+      ]
+    },
+    {
+      "cluster_id": "C0009",
+      "src_ip": "192.168.1.15",
+      "event_type": "LOGOUT",
+      "window_start": "2026-08-15T09:25:10",
+      "window_end": "2026-08-15T09:25:10",
+      "event_count": 1,
+      "pattern": "normal_cluster",
+      "severity_score": 1,
+      "log_ids": [
+        13
+      ]
+    },
+    {
+      "cluster_id": "C0010",
+      "src_ip": "192.168.1.40",
+      "event_type": "LOGIN_FAILURE",
+      "window_start": "2026-08-15T10:00:00",
+      "window_end": "2026-08-15T10:00:20",
+      "event_count": 2,
+      "pattern": "normal_cluster",
+      "severity_score": 4,
+      "log_ids": [
+        14,
+        15
+      ]
+    },
+    {
+      "cluster_id": "C0011",
+      "src_ip": "192.168.1.12",
+      "event_type": "FILE_ACCESS",
+      "window_start": "2026-08-15T10:05:00",
+      "window_end": "2026-08-15T10:05:00",
+      "event_count": 1,
+      "pattern": "normal_cluster",
+      "severity_score": 1,
+      "log_ids": [
+        16
+      ]
+    },
+    {
+      "cluster_id": "C0012",
+      "src_ip": "192.168.1.40",
+      "event_type": "PRIVILEGE_ESCALATION",
+      "window_start": "2026-08-15T10:15:45",
+      "window_end": "2026-08-15T10:15:45",
+      "event_count": 1,
+      "pattern": "critical_event",
+      "severity_score": 3,
+      "log_ids": [
+        17
+      ]
+    },
+    {
+      "cluster_id": "C0013",
+      "src_ip": "192.168.1.18",
+      "event_type": "LOGIN_SUCCESS",
+      "window_start": "2026-08-15T11:00:00",
+      "window_end": "2026-08-15T11:00:00",
+      "event_count": 1,
+      "pattern": "normal_cluster",
+      "severity_score": 1,
+      "log_ids": [
+        18
+      ]
+    },
+    {
+      "cluster_id": "C0014",
+      "src_ip": "192.168.1.18",
+      "event_type": "DATA_EXFIL_SUSPECTED",
+      "window_start": "2026-08-15T11:02:30",
+      "window_end": "2026-08-15T11:03:00",
+      "event_count": 2,
+      "pattern": "normal_cluster",
+      "severity_score": 4,
+      "log_ids": [
+        19,
+        20
+      ]
+    },
+    {
+      "cluster_id": "C0015",
+      "src_ip": "192.168.1.18",
+      "event_type": "DATA_EXFIL_CONFIRMED",
+      "window_start": "2026-08-15T11:03:30",
+      "window_end": "2026-08-15T11:03:30",
+      "event_count": 1,
+      "pattern": "critical_event",
+      "severity_score": 3,
+      "log_ids": [
+        21
+      ]
+    }
+  ]
+}

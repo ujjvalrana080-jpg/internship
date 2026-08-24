@@ -1,0 +1,115 @@
+======================================================================
+ Jagspire Forensic Investigation System v1 — Live API Demo Transcript
+ Captured: 2026-08-24 19:33:46 UTC
+ Server: uvicorn api.main:app --host 127.0.0.1 --port 8000
+======================================================================
+
+$ curl http://127.0.0.1:8000/
+{
+    "system": "Jagspire Forensic Investigation System v1",
+    "status": "online",
+    "endpoints": [
+        "/logs",
+        "/logs/{severity}",
+        "/correlation",
+        "/analysis",
+        "/ingest"
+    ]
+}
+
+$ curl http://127.0.0.1:8000/logs   (showing first 2 of 21 records)
+[
+  {
+    "id": 1,
+    "timestamp": "2026-08-15T09:01:12",
+    "event_type": "LOGIN_SUCCESS",
+    "message": "User jdoe logged in successfully",
+    "severity": "INFO",
+    "src_ip": "192.168.1.10",
+    "user": "jdoe"
+  },
+  {
+    "id": 2,
+    "timestamp": "2026-08-15T09:01:45",
+    "event_type": "LOGIN_FAILURE",
+    "message": "Failed login attempt for admin",
+    "severity": "WARNING",
+    "src_ip": "192.168.1.22",
+    "user": "admin"
+  }
+]
+... (21 total records)
+
+$ curl http://127.0.0.1:8000/logs/CRITICAL
+[
+    {
+        "id": 6,
+        "timestamp": "2026-08-15T09:02:40",
+        "event_type": "BRUTE_FORCE_SUSPECTED",
+        "message": "5+ failed logins within 5 minutes",
+        "severity": "CRITICAL",
+        "src_ip": "192.168.1.22",
+        "user": "admin"
+    },
+    {
+        "id": 11,
+        "timestamp": "2026-08-15T09:12:55",
+        "event_type": "INTRUSION_ATTEMPT",
+        "message": "Payload matched known exploit signature",
+        "severity": "CRITICAL",
+        "src_ip": "192.168.1.30",
+        "user": "unknown"
+    },
+    {
+        "id": 17,
+        "timestamp": "2026-08-15T10:15:45",
+        "event_type": "PRIVILEGE_ESCALATION",
+        "message": "Unauthorized sudo attempt detected",
+        "severity": "CRITICAL",
+        "src_ip": "192.168.1.40",
+        "user": "root"
+    },
+    {
+        "id": 21,
+        "timestamp": "2026-08-15T11:03:30",
+        "event_type": "DATA_EXFIL_CONFIRMED",
+        "message": "Sustained large transfer to external host over 3 minutes",
+        "severity": "CRITICAL",
+        "src_ip": "192.168.1.18",
+        "user": "ckent"
+    }
+]
+
+$ curl http://127.0.0.1:8000/logs/bogus   (invalid severity -> 400)
+{"detail":"Invalid severity 'bogus'. Must be one of ['CRITICAL', 'INFO', 'WARNING']."}
+HTTP 400
+
+$ curl http://127.0.0.1:8000/correlation   (summary only)
+{
+  "total_clusters": 15,
+  "flagged_clusters": 5,
+  "pattern_breakdown": {
+    "normal_cluster": 10,
+    "repeated_failures": 1,
+    "critical_event": 4
+  },
+  "top_flagged_ips": [
+    "192.168.1.18",
+    "192.168.1.22",
+    "192.168.1.30",
+    "192.168.1.40"
+  ]
+}
+
+$ curl http://127.0.0.1:8000/analysis
+{
+  "summary": "Forensic AI summary: 21 log events analyzed. 7 Normal, 10 Suspicious, 4 Critical. Highest-risk source IPs: 192.168.1.22 (1 critical events), 192.168.1.30 (1 critical events), 192.168.1.40 (1 critical events), 192.168.1.18 (1 critical events). Recommendation: prioritize manual review of Critical-classified events and cross-reference with the correlation engine's flagged clusters.",
+  "counts": {
+    "Normal": 7,
+    "Suspicious": 10,
+    "Critical": 4
+  }
+}
+
+$ curl -I http://127.0.0.1:8000/docs   (Swagger UI reachable)
+HTTP/1.1 200 OK
