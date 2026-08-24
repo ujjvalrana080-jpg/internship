@@ -1,0 +1,32 @@
+{
+  "evidence_folder": "/home/claude/week2_forensic_tools/sample_data/evidence_folder",
+  "generated_at": "2026-08-24T19:35:44.696693",
+  "total_files": 3,
+  "skipped_unsupported_files": [],
+  "files": [
+    {
+      "file_name": "access.csv",
+      "file_type": "csv",
+      "size_bytes": 71,
+      "modified_at": "2026-08-24T19:35:21.365571",
+      "metadata_changed_at": "2026-08-24T19:35:21.365571",
+      "sha256": "163df7a83ebafa2862c81810e38d7d524082663a8607eebade94dbc2e8015ee3"
+    },
+    {
+      "file_name": "case_meta.json",
+      "file_type": "json",
+      "size_bytes": 47,
+      "modified_at": "2026-08-24T19:35:21.365571",
+      "metadata_changed_at": "2026-08-24T19:35:21.365571",
+      "sha256": "669f0c4741e18efdc2ed32e878daed39f0f2bcf022c3984d67508a44b3e2a2ca"
+    },
+    {
+      "file_name": "notes.txt",
+      "file_type": "txt",
+      "size_bytes": 49,
+      "modified_at": "2026-08-24T19:35:21.365571",
+      "metadata_changed_at": "2026-08-24T19:35:21.365571",
+      "sha256": "5111c55b2be0871077e9810ca0fd5b72bfe18c5971652b58a3e60b190dcc318b"
+    }
+  ]
+}
