@@ -1,0 +1,45 @@
+{
+  "profile": {
+    "login": "octocat",
+    "html_url": "https://github.com/octocat",
+    "created_at": "2011-01-25T18:44:36Z",
+    "updated_at": "2024-03-10T02:18:22Z",
+    "public_repos": 8,
+    "followers": 18000,
+    "following": 9,
+    "location": "San Francisco",
+    "bio": null,
+    "blog": "https://github.blog",
+    "twitter_username": null,
+    "hireable": null
+  },
+  "repos": [
+    {
+      "name": "Spoon-Knife",
+      "html_url": "https://github.com/octocat/Spoon-Knife",
+      "created_at": "2011-01-27T19:30:43Z",
+      "pushed_at": "2023-11-15T09:12:00Z",
+      "language": "HTML",
+      "fork": false,
+      "stargazers_count": 12000
+    },
+    {
+      "name": "octocat.github.io",
+      "html_url": "https://github.com/octocat/octocat.github.io",
+      "created_at": "2014-03-05T16:20:00Z",
+      "pushed_at": "2022-06-01T14:00:00Z",
+      "language": "CSS",
+      "fork": false,
+      "stargazers_count": 320
+    },
+    {
+      "name": "git-consortium",
+      "html_url": "https://github.com/octocat/git-consortium",
+      "created_at": "2015-07-12T10:00:00Z",
+      "pushed_at": "2021-01-20T11:30:00Z",
+      "language": null,
+      "fork": true,
+      "stargazers_count": 190
+    }
+  ]
+}

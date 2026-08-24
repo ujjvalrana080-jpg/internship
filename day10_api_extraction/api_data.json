@@ -1,0 +1,49 @@
+{
+  "source_api": "GitHub REST API v3",
+  "query_target": "octocat",
+  "fetched_at": "2026-08-24T19:40:53.869899",
+  "note": "Live API call failed (rate-limited); using cached sample response captured earlier from the same endpoint to demonstrate extraction logic.",
+  "osint_data": {
+    "username": "octocat",
+    "profile_url": "https://github.com/octocat",
+    "account_created_at": "2011-01-25T18:44:36Z",
+    "account_last_updated_at": "2024-03-10T02:18:22Z",
+    "public_repos_count": 8,
+    "followers": 18000,
+    "following": 9,
+    "location": "San Francisco",
+    "bio": null,
+    "blog_or_website": "https://github.blog",
+    "twitter_handle": null,
+    "hireable": null,
+    "recent_repositories": [
+      {
+        "name": "Spoon-Knife",
+        "url": "https://github.com/octocat/Spoon-Knife",
+        "created_at": "2011-01-27T19:30:43Z",
+        "last_pushed_at": "2023-11-15T09:12:00Z",
+        "language": "HTML",
+        "is_fork": false,
+        "stars": 12000
+      },
+      {
+        "name": "octocat.github.io",
+        "url": "https://github.com/octocat/octocat.github.io",
+        "created_at": "2014-03-05T16:20:00Z",
+        "last_pushed_at": "2022-06-01T14:00:00Z",
+        "language": "CSS",
+        "is_fork": false,
+        "stars": 320
+      },
+      {
+        "name": "git-consortium",
+        "url": "https://github.com/octocat/git-consortium",
+        "created_at": "2015-07-12T10:00:00Z",
+        "last_pushed_at": "2021-01-20T11:30:00Z",
+        "language": null,
+        "is_fork": true,
+        "stars": 190
+      }
+    ]
+  }
+}
