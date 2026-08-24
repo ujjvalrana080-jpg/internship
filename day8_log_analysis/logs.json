@@ -1,0 +1,57 @@
+{
+  "source_file": "system.log",
+  "generated_at": "2026-08-24T19:35:17.393881",
+  "total_lines_parsed": 16,
+  "filtered_count": 9,
+  "counts_by_level": {
+    "ERROR": 5,
+    "WARNING": 4
+  },
+  "entries": [
+    {
+      "timestamp": "2026-08-08T08:20:45",
+      "event_type": "WARNING",
+      "message": "Disk usage at 85% on /var/log"
+    },
+    {
+      "timestamp": "2026-08-08T08:22:03",
+      "event_type": "ERROR",
+      "message": "Database connection timeout after 30s"
+    },
+    {
+      "timestamp": "2026-08-08T08:22:30",
+      "event_type": "ERROR",
+      "message": "Retry failed: unable to reach db-primary"
+    },
+    {
+      "timestamp": "2026-08-08T08:30:12",
+      "event_type": "WARNING",
+      "message": "High memory usage detected: 92%"
+    },
+    {
+      "timestamp": "2026-08-08T08:31:00",
+      "event_type": "ERROR",
+      "message": "Unhandled exception in worker thread: NullReferenceException"
+    },
+    {
+      "timestamp": "2026-08-08T08:40:55",
+      "event_type": "WARNING",
+      "message": "API rate limit approaching for client_id=4471"
+    },
+    {
+      "timestamp": "2026-08-08T08:42:10",
+      "event_type": "ERROR",
+      "message": "Failed to write to /data/output.log: permission denied"
+    },
+    {
+      "timestamp": "2026-08-08T08:50:33",
+      "event_type": "ERROR",
+      "message": "Payment gateway returned 502 Bad Gateway"
+    },
+    {
+      "timestamp": "2026-08-08T08:51:00",
+      "event_type": "WARNING",
+      "message": "Retrying payment gateway request (attempt 2/3)"
+    }
+  ]
+}
